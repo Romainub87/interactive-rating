@@ -1,67 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style/index.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet" />
-  
-  <title>Frontend Mentor | Interactive rating component</title>
-
-</head>
-<body>
-  <div class="encadre">
-    <img src="./images/icon-star.svg" class="etoile">
-    <div class="contenu-rating">
-      <div class="question">How did we do?</div>
-      <div class="text">Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!</div> 
-      <div class="notes">
-        <div class="chiffre">1</div>
-        <div class="chiffre">2</div>
-        <div class="chiffre">3</div>
-        <div class="chiffre">4</div> 
-        <div class="chiffre">5</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <div class="encadre">
+      <img src="./images/icon-star.svg" class="etoile" />
+      <div class="contenu-rating">
+        <div class="question">How did we do?</div>
+        <div class="text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </div>
+        <div class="notes">
+          <div class="chiffre">1</div>
+          <div class="chiffre">2</div>
+          <div class="chiffre">3</div>
+          <div class="chiffre">4</div>
+          <div class="chiffre">5</div>
+        </div>
+        <div class="alert">Choose a rate !</div>
+        <div class="submit">
+          <button type="submit" class="boutonbtn">Submit</button>
+        </div>
       </div>
-      <div class="submit">
-        <button type="submit" class="boutonbtn">Submit</button>
-      </div>
-      
     </div>
-  </div>
-    
-
-  
-
- 
-
-  
-
-  </div>
-
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="index.js"></script>
-
-</body>
+    <div class="encadre-thank">
+      <img
+        class="img-thank"
+        src="images/illustration-thank-you.svg"
+        width="170"
+      />
+      <div class="text-rate">
+        You selected
+        <span class="rate"></span>
+        out of 5
+      </div>
+      <div class="thank">Thank you!</div>
+      <div class="text-thank">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor </a
+      >. Coded by
+      <a href="#">Your Name Here</a>
+      .
+    </div>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

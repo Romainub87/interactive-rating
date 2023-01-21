@@ -6,6 +6,14 @@ $Medium_blue: hsl(212, 21%, 24%);
 $Very_dark_blue: hsl(216, 12%, 8%);
 $orange: hsl(25, 97%, 53%);
 
+@mixin media-min($_min-width) {
+  @media screen and (min-width: $_min-width) {
+    & {
+      @content;
+    }
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,92 +29,169 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background: $Dark_blue;
-    width: 300px;
-    padding: 30px;
+    width: 260px;
+    height: max-content;
+    padding: 25px;
+    padding-bottom: 30px;
     border-radius: 25px;
 
+    @include media-min(425px) {
+      width: 325px;
+      padding: 35px;
+    }
+
     .etoile {
-        height: 13px;
-        width: 14px;
-        background-color: $Medium_blue;
-        padding: 13px;
-        border-radius: 75px;
-        margin-bottom: 10px;
+      height: 13px;
+      width: 14px;
+      background-color: $Medium_blue;
+      padding: 13px;
+      border-radius: 75px;
+      margin-bottom: 10px;
     }
 
     .contenu-rating {
+      display: flex;
+      flex-direction: column;
+
+      .question {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 1.3px;
+      }
+
+      .text {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: $Light_grey;
+        font-weight: 500;
+      }
+
+      .notes {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
 
-        .question {
-            margin-top:20px;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 1.3px;
-        }
+        .chiffre {
+          background-color: $Medium_blue;
+          padding-bottom: 10px;
+          padding-top: 13px;
+          padding-left: 16px;
+          padding-right: 16px;
+          border-radius: 100%;
+          font-size: 13px;
+          color: $Medium_grey;
 
-        .text {
-            margin-top: 10px;
-            font-size: 13px;
-            line-height: 1.5;
-            color: $Light_grey;
-            font-weight: 500;
-        }
+          &:first-child {
+            padding-bottom: 10px;
+            padding-top: 13px;
+            padding-left: 18px;
+            padding-right: 18px;
+          }
 
-        .notes {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            margin-bottom: 25px;
-            align-items: center;
-            margin-left: 0;
+          @include media-min(425px) {
+            background-color: $Medium_blue;
+            padding-bottom: 12px;
+            padding-top: 15px;
+            padding-left: 18px;
+            padding-right: 18px;
+            border-radius: 100%;
+            font-size: 14px;
+            color: $Medium_grey;
 
-            .chiffre {
-                background-color: $Medium_blue;
-                padding-bottom: 10px;
-                padding-top: 13px;
-                padding-left: 16px;
-                padding-right: 16px;
-                border-radius: 100%;
-                font-size: 14px;
-                color: $Medium_grey;
-
-                &:first-child {
-                    padding-bottom: 10px;
-                    padding-top: 13px;
-                    padding-left: 18px;
-                    padding-right: 18px;
-                }
+            &:first-child {
+              padding-bottom: 12px;
+              padding-top: 15px;
+              padding-left: 20px;
+              padding-right: 20px;
             }
+          }
         }
+      }
 
-        .submit {
-            width: 100%;
-            align-items: center;
-            display: flex;
-            margin-top: 10px;
+      .submit {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        margin-top: 10px;
 
-            .boutonbtn {
-                width: 100%;
-                height: 40px;
-                font-size: 14px;
-                font-weight: 500;
-                letter-spacing: 1.7px;
-                color: white;
-                border: none;
-                border-radius: 35px;
-                padding-top: 4px;
-                font-family: Overpass;
-                text-transform: uppercase;
-                background-color: $orange;
+        .boutonbtn {
+          width: 100%;
+          height: 40px;
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 1.7px;
+          color: white;
+          border: none;
+          border-radius: 35px;
+          padding-top: 4px;
+          font-family: Overpass;
+          text-transform: uppercase;
+          background-color: $orange;
 
-                &:hover {
-                    cursor: pointer;
-                    background-color: white;
-                    color: $orange;
-                }
-            }
+          &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $orange;
+          }
         }
+      }
+    }
+  }
+  .encadre-thank {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $Dark_blue;
+    width: 260px;
+    height: max-content;
+    padding: 25px;
+    padding-bottom: 30px;
+    border-radius: 25px;
+
+    @include media-min(425px) {
+      width: 325px;
+      padding: 35px;
+    }
+
+    .img-thank {
+      display: flex;
+      padding: 7px;
+    }
+
+    .text-rate {
+      margin: 25px;
+      background-color: $Medium_blue;
+      color: $orange;
+      padding: 17px;
+      padding-bottom: 4px;
+      padding-top: 7px;
+      border-radius:25px;
+    }
+
+    .thank {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+    }
+
+    .text-thank {
+      text-align: center;
+      margin: 14px;
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 0px;
     }
   }
 }

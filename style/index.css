@@ -14,9 +14,18 @@ body .encadre {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #252d37;
-  width: 300px;
-  padding: 30px;
+  width: 260px;
+  height: max-content;
+  padding: 25px;
+  padding-bottom: 30px;
   border-radius: 25px;
+}
+
+@media screen and (min-width: 425px) {
+  body .encadre {
+    width: 325px;
+    padding: 35px;
+  }
 }
 
 body .encadre .etoile {
@@ -50,10 +59,11 @@ body .encadre .contenu-rating .text {
 
 body .encadre .contenu-rating .notes {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 25px;
   align-items: center;
+  text-align: center;
   margin-left: 0;
 }
 
@@ -64,7 +74,7 @@ body .encadre .contenu-rating .notes .chiffre {
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 100%;
-  font-size: 14px;
+  font-size: 13px;
   color: #7c8798;
 }
 
@@ -73,6 +83,25 @@ body .encadre .contenu-rating .notes .chiffre:first-child {
   padding-top: 13px;
   padding-left: 18px;
   padding-right: 18px;
+}
+
+@media screen and (min-width: 425px) {
+  body .encadre .contenu-rating .notes .chiffre {
+    background-color: #303c4a;
+    padding-bottom: 12px;
+    padding-top: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 100%;
+    font-size: 14px;
+    color: #7c8798;
+  }
+  body .encadre .contenu-rating .notes .chiffre:first-child {
+    padding-bottom: 12px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 body .encadre .contenu-rating .submit {
@@ -101,4 +130,58 @@ body .encadre .contenu-rating .submit .boutonbtn:hover {
   cursor: pointer;
   background-color: white;
   color: #fb7413;
+}
+
+body .encadre-thank {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #252d37;
+  width: 260px;
+  height: max-content;
+  padding: 25px;
+  padding-bottom: 30px;
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 425px) {
+  body .encadre-thank {
+    width: 325px;
+    padding: 35px;
+  }
+}
+
+body .encadre-thank .img-thank {
+  display: flex;
+  padding: 7px;
+}
+
+body .encadre-thank .text-rate {
+  margin: 25px;
+  background-color: #303c4a;
+  color: #fb7413;
+  padding: 17px;
+  padding-bottom: 4px;
+  padding-top: 7px;
+  border-radius: 25px;
+}
+
+body .encadre-thank .thank {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+body .encadre-thank .text-thank {
+  text-align: center;
+  margin: 14px;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 0px;
 }
