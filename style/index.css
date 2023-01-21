@@ -185,3 +185,33 @@ body .encadre-thank .text-thank {
   line-height: 1.8;
   margin-bottom: 0px;
 }
+
+body .challenge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+body .challenge .lien-dev {
+  text-decoration: none;
+  color: white;
+}
+
+body .creator {
+  color: white;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+body .creator .lien-dev {
+  text-decoration: none;
+  color: white;
+}
